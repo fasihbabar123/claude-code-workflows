@@ -1,0 +1,22 @@
+name: Claude Daily Codebase Audit
+
+on:
+  schedule:
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  daily-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: "Review src/ and tests/ against CLAUDE.md conventions and summarize any drift or missing edge-case coverage."
+          claude_args: "--max-turns 3 --permission-mode dontAsk --allowedTools Read,Glob,Grep"

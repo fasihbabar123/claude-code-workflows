@@ -7,3 +7,4 @@ Reference implementation of Claude Code architectural patterns:
 - **Permission Modes & Stop Hooks (`.claude/settings.json`):** Pre-approved allowlists for unattended `dontAsk` runs paired with post-turn verification.
 - **Deterministic Guardrails (`.claude/hooks/`):** `PreToolUse` secret redaction (`updatedInput`) and `main`-branch push blocking, plus `SessionStart` (`compact`) state recovery.
 - **Headless CI & Agent SDK (`scripts/`):** Deterministic `--bare` JSON-schema pipelines (`ci_audit.sh`) and programmatic SDK options (`agent_sdk_runner.py`).
+- **GitHub Actions (`.github/workflows/`):** `@claude` comment-driven PR automation (`claude.yaml`) and scheduled read-only audits (`claude-daily-audit.yaml`).
