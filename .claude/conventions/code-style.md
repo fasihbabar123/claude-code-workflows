@@ -1,0 +1,3 @@
+- Place all application modules in `src/` with explicit Python type hints on every function signature.
+- Raise `ValueError` for invalid domain inputs rather than returning `None` or sentinel values.
+- Use explicit named functions in `src/`, not lambda assignments.

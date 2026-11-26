@@ -1,0 +1,2 @@
+- Place all unit tests under `tests/` using the `test_*.py` naming convention.
+- Use `unittest.TestCase` assertions (`assertEqual`, `assertRaises`) rather than bare `assert` statements.
