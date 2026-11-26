@@ -1,0 +1,8 @@
+{
+  "name": "claude-code-workflows",
+  "version": "0.1.0",
+  "description": "Verification skills, deterministic security hooks, and cold-review subagents for Python workflows",
+  "author": {
+    "name": "Fasih Babar"
+  }
+}
